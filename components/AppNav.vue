@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Skyline Ivy</h1>
+    <h1>HuemulShop</h1>
     <nav>
       <ul>
         <li>
@@ -52,21 +52,22 @@ nav {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 8px 0;
+
   ul {
     padding-left: 0;
     li {
       display: inline;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-size: 13px;
+      font-size: 16px;
       padding: 0 20px;
       border-left: 1px solid #ddd;
       border-right: 1px solid #ddd;
       position: relative;
       a {
-        color: black;
+        color: #5ce6cd;
         &:hover {
-          color: #c14103;
+          text-decoration: underline;
         }
       }
     }
