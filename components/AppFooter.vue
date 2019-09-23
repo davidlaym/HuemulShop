@@ -1,6 +1,5 @@
 <template>
   <footer>
-    <app-footer-links />
     <div class="copyright">
       <p>
         Gracias a @claudrockr y @jorgeepunan por entregar su tiempo para hechar a andar este proyecto. 🙏

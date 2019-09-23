@@ -6,13 +6,6 @@
       </section>
       <section class="product-info">
         <h1>{{ product.name }}</h1>
-        <star-rating
-          :rating="product.starrating"
-          :star-size="15"
-          :show-rating="false"
-          active-color="#000"
-          style="margin: 5px 0"
-        ></star-rating>
         <h4 class="price">{{ product.price | dollar }}</h4>
         <p>{{ product.description }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
@@ -36,13 +29,6 @@
     <div class="review">
       <h2>Reviews</h2>
       <!-- maybe an image of a person? -->
-      <star-rating
-        :rating="product.starrating"
-        active-color="#000"
-        :star-size="15"
-        :show-rating="false"
-        style="margin: 5px 0"
-      ></star-rating>
       <p>{{ product.review }}</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto placeat consequatur voluptas sit mollitia ratione autem, atque sequi odio laborum, recusandae quia distinctio voluptatibus sint, quae aliquid possimus exercitationem.</p>
     </div>
@@ -52,12 +38,10 @@
 
 <script>
 import { mapState } from "vuex";
-import StarRating from "vue-star-rating";
 import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
 
 export default {
   components: {
-    StarRating,
     AppFeaturedProducts
   },
   data() {
