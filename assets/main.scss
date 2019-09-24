@@ -24,7 +24,6 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -78,7 +77,7 @@ button.purchase {
 }
 
 button.pay-with-stripe {
-  background: black;
+  background: #5ce6cd;
   color: white;
   font-size: 16px;
   border: none;

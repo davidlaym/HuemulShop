@@ -3,9 +3,9 @@
     <section v-if="cartCount > 0">
       <table>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
           <th>Total</th>
         </tr>
         <tr v-for="item in cart" :key="item.id">
@@ -30,14 +30,14 @@
             <p>
               <strong>Subtotal:</strong>
             </p>
-            <p>Shipping:</p>
+            <p>Envío:</p>
             <p class="golden">Total:</p>
           </div>
           <div class="num">
             <p>
               <strong>{{ cartTotal | dollar }}</strong>
             </p>
-            <p>Free Shipping</p>
+            <p>¡Gratis!</p>
             <p class="golden">{{ cartTotal | dollar }}</p>
           </div>
         </div>
@@ -45,9 +45,9 @@
     </section>
 
     <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
+      <p>Tu carro está vacío, ¡Compra algo marrano!</p>
       <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back Home</nuxt-link>
+        <nuxt-link exact to="/">Ir al inicio</nuxt-link>
       </button>
     </section>
   </div>
@@ -101,7 +101,8 @@ th {
 }
 
 .golden {
-  background: #f2eee2;
+  // background: #f2eee2;
+  border: 1px solid #5ce6cd;
   font-weight: bold;
   padding: 10px;
 }

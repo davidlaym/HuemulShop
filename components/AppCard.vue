@@ -1,17 +1,13 @@
 <template>
   <div id="app">
     <div v-if="cartUIStatus === 'idle'" class="payment">
-      <h3>Please enter your payment details:</h3>
+      <h3>Necesitamos tus detalles de compra:</h3>
       <label for="email">Email</label>
       <br />
-      <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
+      <input id="email" type="email" v-model="stripeEmail" placeholder="usuario@dominio.com" />
       <br />
-      <label for="card">Credit Card</label>
+      <label for="card">Tarjeta de crédito</label>
       <br />
-      <small>
-        Test using this credit card:
-        <span class="cc-number">4242 4242 4242 4242</span>, and enter any 5 digits for the zip code
-      </small>
       <card
         class="stripe-card"
         id="card"
@@ -24,23 +20,22 @@
         class="pay-with-stripe button"
         @click="pay"
         :disabled="!complete || !stripeEmail"
-      >Pay with credit card</button>
+      >Pagar</button>
     </div>
 
     <div v-else class="statussubmit">
       <div v-if="cartUIStatus === 'failure'">
-        <h3>Oh No!</h3>
-        <p>Something went wrong!</p>
-        <button @click="clearCart">Please try again</button>
+        <h3>¡Wow!</h3>
+        <p>Hubo un error...</p>
+        <button @click="clearCart">Intenta nuevamente</button>
       </div>
 
       <div v-else-if="cartUIStatus === 'loading'" class="loadcontain">
-        <h4>Please hold, we're filling up your cart with goodies</h4>
-        <p>Placeholder loader</p>
+        <h4>Estamos procesando...</h4>
       </div>
 
       <div v-else-if="cartUIStatus === 'success'" class="loadcontain">
-        <h4>Success!</h4>
+        <h4>¡Bien!</h4>
       </div>
     </div>
   </div>

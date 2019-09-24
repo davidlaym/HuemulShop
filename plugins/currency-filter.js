@@ -5,3 +5,8 @@ Vue.filter("dollar", function(value) {
   // The first is an actual dollar.
   return `$${parseFloat(value).toFixed(2)}`
 })
+
+Vue.filter("peso", function(value, signo = "$") {
+  let valorConDecimales = value.toFixed(2);
+  return signo + "" + valorConDecimales.toString()
+})
