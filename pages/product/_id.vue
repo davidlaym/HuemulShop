@@ -5,23 +5,24 @@
         <img :src="`/products/${product.img}`" />
       </section>
       <section class="product-info">
-        <h1>{{ product.name }}</h1>
-        <h4 class="price">{{ product.price | dollar }}</h4>
+        <h1 class="product-title">{{ product.name }}</h1>
+        <h4 class="price">{{ product.price | peso }}</h4>
         <p>{{ product.description }}</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
+        <h4>Seleccione la cantidad que deseas:</h4>
         <p class="quantity">
           <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
           <input type="number" v-model="quantity" />
           <button class="update-num" @click="quantity++">+</button>
         </p>
-        <p>
+        <!-- <p>
           Available in additional colors:
           <strong>
             <span :style="`color: ${product.color}`">{{ product.color }}</span>
           </strong>
-        </p>
+        </p> -->
         <p>
-          <button class="button purchase" @click="cartAdd">Add to Cart</button>
+          <button class="button purchase" @click="cartAdd">Agregar al carro</button>
         </p>
       </section>
     </section>
@@ -77,6 +78,14 @@ export default {
   grid-template-columns: 1fr 2fr;
 }
 
+.product-info {
+  margin-left: 40px;
+}
+
+.product-title {
+  margin: 0;
+}
+
 input {
   width: 60px;
   font-size: 25px;
@@ -85,10 +94,10 @@ input {
 }
 
 .update-num {
-  background: black;
-  border-color: black;
+  background: #49a796;
+  border-color: #49a796;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   width: 45px;
 }
 

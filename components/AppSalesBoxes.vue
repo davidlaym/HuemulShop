@@ -15,18 +15,18 @@ export default {
       boxes: [
         {
           icon: "/icon-package.svg",
-          heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          heading: "Envío incluído o entrega personalmente",
+          details: "Como prefieras coordinamos"
         },
         {
           icon: "/icon-cal.svg",
-          heading: "24/7 Customer Service",
-          details: "Call us any time"
+          heading: "Envío expedito 🙄",
+          details: "Tenemos 99.9% de efectividad anual en la entrega"
         },
         {
           icon: "/icon-service.svg",
-          heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
+          heading: "¿Dudas?",
+          details: "Alcánzanos en devschile.slack.com canal #comunidad"
         }
       ]
     };

@@ -1,23 +1,27 @@
 <template>
   <header>
-    <h1>HuemulShop</h1>
+    <h1 class="main-title">HuemulShop</h1>
+    <p class="legend">Tienda de productos producidos por y para la comunidad <a href="https://www.devschile.cl/">devsChile</a>.</p>
     <nav>
       <ul>
         <li>
           <nuxt-link exact to="/">Inicio</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/all">Todo</nuxt-link>
+          <nuxt-link to="/stickers">Stickers</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/women">Stickers</nuxt-link>
+          <nuxt-link to="/tazones">Tazones</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/men">Otros</nuxt-link>
+          <nuxt-link to="/posavasos">Posavasos</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/imanes">Imanes</nuxt-link>
         </li>
         <li>
           <div class="carttotal" v-if="cartCount > 0">{{ cartCount }}</div>
-          <nuxt-link to="/cart">Carro de compras</nuxt-link>
+          <nuxt-link to="/cart" class="cart-icon"><img src="https://icongr.am/clarity/shopping-cart.svg?size=24&color=ffffff"></nuxt-link>
         </li>
       </ul>
     </nav>
@@ -43,6 +47,11 @@ header {
   padding: 40px 40px 0;
 }
 
+.main-title {
+  font-size: 60px;
+  margin: 0;
+}
+
 nav {
   display: flex;
   width: 80vw;
@@ -65,7 +74,8 @@ nav {
       border-right: 1px solid #ddd;
       position: relative;
       a {
-        color: #5ce6cd;
+        color: #49a796;
+        font-weight: bold;
         &:hover {
           text-decoration: underline;
         }
@@ -74,21 +84,30 @@ nav {
   }
 }
 
+.cart-icon {
+  display: inline-block;
+
+  > img {
+    margin-bottom: -5px;
+  }
+}
+
 .carttotal {
   position: absolute;
   border-radius: 1000px;
-  background: #5ce6cd;
+  background: #49a796;
   color: white;
   font-size: 10px;
   padding: 3px;
-  top: -18px;
-  right: -5px;
+  top: -23px;
+  right: 0;
   width: 25px;
   text-align: center;
   height: 25px;
-  font-size: 10px;
-  padding: 6px 10px;
+  font-size: 20px;
+  padding: 0 8px;
   font-weight: bold;
+  text-shadow: 0 0 3px #000;
 }
 
 @media screen and (max-width: 850px) {

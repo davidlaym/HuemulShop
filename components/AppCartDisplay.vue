@@ -102,7 +102,7 @@ th {
 
 .golden {
   // background: #f2eee2;
-  border: 1px solid #5ce6cd;
+  border: 1px solid #49a796;
   font-weight: bold;
   padding: 10px;
 }

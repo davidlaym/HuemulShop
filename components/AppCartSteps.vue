@@ -2,15 +2,15 @@
   <section>
     <div class="shopping">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount === 0 }">01</h2>
-      <h4>Shopping Cart</h4>
+      <h4>Tu Carro</h4>
     </div>
     <div class="checkout">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount > 0 }">02</h2>
-      <h4>Check out</h4>
+      <h4>¡Paga!</h4>
     </div>
     <div class="order">
       <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
-      <h4>Order Complete</h4>
+      <h4>¡Tamos Listos!</h4>
     </div>
   </section>
 </template>
@@ -52,8 +52,8 @@ h2 {
   padding-top: 21px;
   color: #555;
   &.active {
-    background: #5ce6cd;
-    border: 1px solid #5ce6cd;
+    background: #49a796;
+    border: 1px solid #49a796;
     color: white;
   }
 }

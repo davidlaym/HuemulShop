@@ -1,15 +1,15 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>Productos Destacados</span>
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
         <img :src="`/products/${product.img}`" />
         <h3>{{ product.name }}</h3>
-        <h4>{{ product.price | dollar }}</h4>
+        <h4>{{ product.price | peso }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">Ver Detalles ></button>
         </NuxtLink>
       </div>
     </div>
@@ -28,17 +28,15 @@ export default {
 
 <style lang="scss" scoped>
 section {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .featureditems {
   width: 100%;
-  margin: 20px 0 70px;
+  margin: 40px 0 70px;
   .item {
-    border: 1px solid #eee2dc;
-    box-shadow: 0 3px 10px 0px #eee;
-    border-radius: 40px;
-    padding: 10px 20px 30px;
+    border: 1px solid #fff;
+    padding: 20px;
     min-height: 150px;
     justify-self: center;
     align-self: center;
@@ -47,12 +45,13 @@ section {
 }
 
 h4 {
-  color: #5ce6cd;
-  margin: 10px 0;
+  margin: 10px 0 20px;
+  font-size: 22px;
+  color: #49a796;
 }
 
 h2 {
-  color: #5ce6cd;
+  color: #49a796;
   text-align: center;
   overflow: hidden;
 }
